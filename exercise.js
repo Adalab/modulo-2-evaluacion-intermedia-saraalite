@@ -8,6 +8,8 @@ const num = getRandomNumber(100);
 
 console.log(num);
 
+
+
 //Recogemos valores
 const input = document.querySelector(".js-input");
 const button = document.querySelector(".js-button");
@@ -16,12 +18,16 @@ const attemptsText = document.querySelector(".js-attempts");
 let attempts = 0;
 
 
+
+
 //Función que nos recoge el valor del input
 function updateValue() {
   let inputValue = input.value;
   console.log(inputValue);
   return  parseInt(inputValue);
 }
+
+
 
 //Función que compara los números con if
 
@@ -42,9 +48,13 @@ function compareNumbers(){
 }
 
 
+//Compiladora
+function checkValues(){
+    updateValue();
+    compareNumbers();
+}
 
 
 
-
-button.addEventListener("click",updateValue);
-button.addEventListener("click",compareNumbers);
+//Escuchador de evento
+button.addEventListener("click",checkValues);
