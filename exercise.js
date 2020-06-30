@@ -22,9 +22,9 @@ let attempts = 0;
 
 //Función que nos recoge el valor del input
 function updateValue() {
-  let inputValue = input.value;
+  let inputValue = parseInt(input.value);
   console.log(inputValue);
-  return  parseInt(inputValue);
+  return  inputValue;
 }
 
 
@@ -35,7 +35,9 @@ function compareNumbers(){
     attempts = attempts + 1
     attemptsText.innerHTML = 'Número de intentos: '+ attempts;
     const updatedValue = updateValue();
-    if (updatedValue==num){
+    if ( isNaN(updatedValue) || updatedValue>100 || updatedValue<0){
+        clue.innerHTML= 'El número debe estar entre 0 y 100'
+    } else if (updatedValue==num){
         clue.innerHTML= '¡¡¡Has ganado campeona!!!';
 
     } else if (updatedValue < num) {
