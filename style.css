@@ -1,4 +1,37 @@
-.main-title{
+*{
     font-family: 'MuseoModerno', cursive;    
+}
+.body{
+    background-color: #a1a2ce;
+}
+.main{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    margin:auto;
+    margin-top:100px;
+    background-color: pink;
+    border color: pink;
+    border-radius:32%;
+}
+
+.main-wrapper{
+    width:800px;
+}
+
+.input{
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.button{
+    font-weight: bold;
+    cursor:pointer;
+    border-color:pink;
+    background-color: white;
 
 }
+.button:hover {
+    transition: border-color ease 1s, color ease 1s;
+    border-color: #f137b3;
+    color: #f137b3;
+  }
