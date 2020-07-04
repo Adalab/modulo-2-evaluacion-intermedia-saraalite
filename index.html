@@ -4,22 +4,23 @@
     <meta charset="utf-8" />
     <title>Evaluación Intermedia Módulo 2 - Sara Alite</title>
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body class="body">
     <main class="main main-wrapper">
       <h1 class="main-title">Adivina el número   (づ｡◕‿‿◕｡)づ</h1>
 
       <p>Introduce aquí tu número: </p>
-
-      <input class="input js-input" type="text"> 
-    
-      <button class="button js-button">Prueba</button>
+      <form>
+      <label for="input"></label>
+      <input class="input js-input" id="input" name="input" type="text" placeholder="12"></br>
+      <input class="button js-button" type="submit" value="Prueba">
+      </form>
 
       <p class="js-clue">Pista: escribe el número y dale a "prueba"</p>
       <p class="js-attempts">Número de intentos: </p>
 
     </main>
-    <script type="text/javascript" src="exercise.js"></script>
+    <script type="text/javascript" src="./js/exercise.js"></script>
   </body>
 </html>

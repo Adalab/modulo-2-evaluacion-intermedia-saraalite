@@ -11,7 +11,7 @@
     margin:auto;
     margin-top:100px;
     background-color: pink;
-    border color: pink;
+    border-color: pink;
     border-radius:32%;
 }
 
@@ -28,6 +28,8 @@
     cursor:pointer;
     border-color:pink;
     background-color: white;
+    align-self:center;
+
 
 }
 .button:hover {

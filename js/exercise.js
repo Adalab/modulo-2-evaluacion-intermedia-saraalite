@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 
 //Función que genera número aleatorio
 function getRandomNumber(max) {
@@ -27,34 +27,43 @@ function updateValue() {
   return  inputValue;
 }
 
-
+function incrementAttempts(){
+    attempts = attempts + 1
+    attemptsText.innerHTML = 'Número de intentos: '+ attempts;
+}
 
 //Función que compara los números con if
 
+function changeClue(textString){
+    clue.innerHTML= textString
+}
+
 function compareNumbers(){
-    attempts = attempts + 1
-    attemptsText.innerHTML = 'Número de intentos: '+ attempts;
     const updatedValue = updateValue();
     
     if ( isNaN(updatedValue) || updatedValue>100 || updatedValue<0){
-        clue.innerHTML= 'El número debe estar entre 0 y 100'
+        changeClue('El número debe estar entre 0 y 100');
     } else if (updatedValue==num){
-        clue.innerHTML= '¡¡¡Has ganado, campeona!!!';
+        changeClue('¡¡¡Has ganado, campeona!!!');
 
     } else if (updatedValue < num) {
-        clue.innerHTML = 'Demasiado bajo';
+        changeClue('Demasiado bajo');
 
-    } else if (updatedValue > num){
-        clue.innerHTML = 'Demasiado alto';
+    }else if (updatedValue > num){
+        changeClue('Demasiado alto');
     }
 
 }
 
 
+
 //Compiladora
-function checkValues(){
+function checkValues(event){
+    event.preventDefault();
+    incrementAttempts();
     updateValue();
     compareNumbers();
+    
 }
 
 
